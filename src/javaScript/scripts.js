@@ -1,7 +1,7 @@
 
 let handleScroll = {
        allQuestionsCarossel: document.getElementById('allQuestions'),
-
+   
        toRight(interval = 200){
               let allQuestionsCarossel =  handleScroll.allQuestionsCarossel
               let scroollViewWidht = allQuestionsCarossel.offsetWidth
@@ -20,9 +20,9 @@ let handleScroll = {
               }, interval);
               clearTimeout
        }
-}
-function redirectUser(result = 0){
- 
+   }
+   function redirectUser(result = 0){
+   
       
        if(result <= 8){
               try {
@@ -45,19 +45,19 @@ function redirectUser(result = 0){
               useful.alertMessage('você está sendo redirecionado')
        }
        
-}
-let useful = {
+   }
+   let useful = {
        alertMessage(message = 'alerta'){
               alert(message)
        }
-}
-let handleInputRadios = {
+   }
+   let handleInputRadios = {
        allInputRadios: document.querySelectorAll('.radio'),
        CheckInputRadio(){
               let boxValues = {}
               let numberBoxChecked = 0
               let {allInputRadios} = handleInputRadios
-
+   
               allInputRadios.forEach(checkBox  =>{
                      if(checkBox.checked){
                             numberBoxChecked++
@@ -84,18 +84,23 @@ let handleInputRadios = {
               })
               return {total}
        }
-
+   
        
-}
-
-function soma(){
+   }
+   
+   function soma(){
        
            
            if(handleInputRadios.CheckInputRadio().numberBoxChecked == 11){
        
                  redirectUser(handleInputRadios.sumValuesChecked().total)
+                 setTimeout(() => {
+                        location.href = "https://ansiedade.futuro-agora.com/azul?#"
+                 }, 2000);
                  
            }
           handleScroll.toRight(200)
     }
     
+   
+   

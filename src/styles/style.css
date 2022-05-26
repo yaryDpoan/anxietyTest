@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&Lato:ital,wght@0,400;0,700;0,900;1,300;1,400&family=Mulish:ital,wght@0,400;0,600;1,500&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@400;600;700&family=Radio+Canada:wght@600;700&family=Rajdhani:wght@400;500;600&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500&display=swap');
 
 @font-face {
     font-family: 'Stencil';
@@ -28,90 +28,127 @@ body{
     --blue4: #4528fc;
     --purpple: #7a27f2;
     --gray: #343434;
+    --fontColorDefault: #fff;
+    --title: #fff;
+    --subTitle: #fff
 }
 header{
-    overflow: hidden;
+   display: flex;
+   flex-direction: column;
     width: 100vw;
     height: 100vh;
+    overflow-x: auto;
+    color: var(--fontColorDefault)
+}
+header .headerH1  {
+
+    background-color: var(--gray);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     
-    color: white;
 }
 
-header h1{
-    font-family: 'Stencil','Times New Roman', Times, serif;
+header .headerH1 h1{
+    margin-left: 30px;
+    text-align: center;
     display: flex;
-    padding: 20px 0px 0px 50px;
     flex-direction: column;
-    justify-content: center;
-    background-color: var(--gray);
+    color: var(--title);
+    font-family: 'Radio Canada';
+    font-weight: 400;
+   
     font-size: 50px ;
 }
-header h1 span{
+header  .headerH1  span:nth-last-of-type(1){
+    color: var(--fontColorDefault);
+    letter-spacing: 8px;
     position: relative;
-    top: -20px;
-    font-size: 35px;
-    font-family: "Akwe";
+    top: -3px;
+    font-size: 20px;
+    font-family: "Arial";
     font-weight: 100;
-    color: rgba(255, 255, 255, 0.89)
+   
 }
 header .headerMain{
+ 
+    flex: 1;
     gap: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-    background-size: 100% 100%;
-    object-fit: fill;
-    background-image: url('../assets/youngLady.png');
-}
+    background-size: cover;
+    background-image: url('https://storage.builderall.com//franquias/2/455925/editor-html/4319632.png');
+    }
+
 header .headerMain h2{
-    
+    color: var(--fontColorDefault);
     text-align: left;
     font-size: 37px;
     margin-top: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande'
 }
 header .headerMain h2 span{
+    color: var(--title);
     font-size: 52px; 
     font-family: 'Lato',"Arial";
 }
 header .headerMain p{
-    font-family: 'Mulish',Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    opacity: 1;
+
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    font-size: 23px;
 }
-header .headerMain p,header .headerMain h3{
+header .headerMain p b{
+    font-size: 21px;
+    font-family: 'Inter', 'Arial';
+}
+header .headerMain p,header .headerMain p.adivise{
     padding: 0 20px;
     max-width: 500px;
 }
-header .headerMain h3{
+header .headerMain p.adivise{
     font: 400 19px "Roboto";
     
 }
 header button{
-
+     margin-top: 10px;
     font: 400 17px 'Poppins',Arial, Helvetica, sans-serif;
     border-radius: 30px;
+    margin-bottom: 20px;
+    background-color: transparent;
 }
 header button a {
+    background-color: var(--gray);
+    font-family: "Poppins", "arial";
+    border-radius: 30px;
+    font-size: 20px;
     padding: 20px;
-
     display: block;
     text-underline-offset: none;
     text-decoration: none;
-    color: black;
+    color: #fff;
     width: 100%;
     height: 100%;
-    
-   
+    transition-timing-function: ease-out;
+
+}
+
+header button a:hover{
+    background-color: rgb(53, 53, 53);
+    transition-duration: .1s;
+    padding: 21px;
 }
 form{
     font-family: 'Poppins', "Arial","serif";
     width: 100vw;
     height: 100vh;
-    overflow-x: auto;
+    overflow-x: hidden;
     display: flex;
-    background-image: url('https://drive.google.com/file/d/1HSFj3DETsdrCfgfEObUpaZcqkMPfi1Sf/view');
     background-size: cover;
+    background-image: url('../assets/fundo-azul.png');
     
 }
 form::-webkit-scrollbar{
@@ -122,7 +159,6 @@ form .question, form .result{
     gap: 20px;
     flex: none;
     width: 100vw;
-   
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -135,7 +171,7 @@ form h1 {
     text-align: center;
     width: 100vw;
     margin-top: 50px;
-    color: rgb(240, 240, 240);
+    color: var(--title)
    
 }
 
@@ -149,8 +185,13 @@ form .question h2 {
     text-align: justify;
     max-width: 800px;
    margin: 0 auto;
-    color:  #fff;
+   color: var(--fontColorDefault)
 
+}
+.question label{
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 .question div{
     margin-top: 10px;
@@ -175,7 +216,10 @@ form .question h2 {
 }
 .question div span{
     font-size: 30px;
-    color: white;
+    color: var(--fontColorDefault)
+}
+.question div span:hover{
+     opacity: .8;
 }
 
 .buttons .button{
@@ -216,19 +260,34 @@ form .question h2 {
   
 }
 
-
-
 .result{
-    background-color: rgb(14, 13, 13);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(101, 101, 101);
+    padding: 0 10px;
+    
 }
 .result h2{
-    font-size: 45px;
-    color: #fff
+    text-align: center;
+    font-size: 27px;
+    color: var(--fontColorDefault)
 }
 .result input{
     display: none;
 }
+.result img{
+    animation: toSpin 4s infinite alternate ease-in-out;
+    margin-top: 40px;
+    width:  130px;
+    height: 160px;
+
+}
 @media screen and (max-width: 900px){
+    form .question{
+        gap: 40px;
+    }
     header .headerMain{
         background-size: cover;
         background-position: center;
@@ -237,7 +296,15 @@ form .question h2 {
 }
 @media screen and (max-width: 800px){
     header h1{
+   
         text-align: center;
+    }
+    header .headerH1{
+        
+        align-items: center;
+    }
+    header .headerH1 h1{
+        margin-left: 0px;
     }
     header h2{
       
@@ -257,32 +324,46 @@ form .question h2 {
 }
 
 @media screen and (max-width: 600px){
-    header .headerMain{
-        gap: 18px;
-        background-position-x: 0;
-        background-size: 220% 100%;
-        background-clip: content-box;
-        background-repeat: no-repeat;
-        background-position-x: 80%;
+    header .headerH1 h1{
+        font-size: 35px;
     }
+    header .headerMain{
+        gap: 50px;
+
+
+    }
+    
     header h1 {
+    
         padding: 15px 0px 10px 0px;
+    }
+    header h1 span {
+        margin-top: 15px;
+    }
+    header button {
+        margin-top: 0px;
+    }
+    header button a{
+        
+        font-size: 18px;
+        padding: 17px;
     }
     header .headerMain h2{
         font-size: 20px;
+        margin-top: 4px;
         text-align: center;
     }
     header .headerMain h2 span{
         font-size: 35px;
     }
     header .headerMain p{
-        font-size: 14px;
+        font-size: 17px;
     }
-    header .headerMain h3{
+    header .headerMain p b {
         font-size: 17px;
     }
     form h1{
-        font-size: 25px;
+        font-size: 30px;
         padding: 0 8px;
         
     }
@@ -291,7 +372,7 @@ form .question h2 {
     }
     form .question h2, .result h2{
         text-align: center;
-        font-size: 18px;
+        font-size: 21px;
         padding: 0 8px;
     }
     
@@ -299,13 +380,24 @@ form .question h2 {
         text-align: center;
         margin-top: 20px;
     }
+    .question div {
+        gap: 30px
+    }
+    .question label{
+        display: flex;
+        flex-direction: row;
+        gap: 12px;
+        align-items: center;
+    }
     .question div span{
         font-size: 20px;
     }
+   
     .question div input{
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
     }
+    
 }
 @media screen and (max-width: 420px){
    
@@ -317,9 +409,49 @@ form .question h2 {
         padding: 10px;
      
     }
+    .headerMain{
+        align-items: center;
+        justify-content: center;
+    }
 }
+
 @media screen and (max-height: 600px){
+    form h1{
+        font-size: 24px;
+    }
     header .headerMain{
         gap: 35px;
+    }
+    .result h2 {
+
+        margin-top: 80px;
+     
+    }
+    .question{
+        margin-top: 55px;
+    }
+    .question div{
+        margin: 0px;
+      
+    }
+    .result img{
+        width: 90px;
+        height: 90px;
+    }
+}
+@media screen and (max-height: 462px){
+    form h1{
+        display: none;
+    }
+    .question  {
+        margin-top: 70px;
+    }
+   
+}
+
+
+@keyframes toSpin {
+    100%{
+        transform: rotate(360deg);
     }
 }
