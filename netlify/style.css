@@ -140,7 +140,7 @@ form{
     overflow-x: hidden;
     display: flex;
     background-size: cover;
-    background-image: url('../assets/fundo-azul.png');
+    background-image: url('./assets/fundo-azul.png');
     
 }
 form::-webkit-scrollbar{
